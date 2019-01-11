@@ -21,6 +21,5 @@
                <li><a href="sortAccounts">Sort Accounts</a></li>
         
 	</ul>
-
 </body>
 </html>

@@ -23,7 +23,7 @@
 				<td>${account.salary==true?"Yes":"No"}</td>
 				<td>${"N/A"}</td>
 				<td>${"Savings"}</td>
-			</tr>s
+			</tr>
 		</jstl:if>
 		<jstl:if test="${accounts!=null}">
 			<jstl:forEach var="account" items="${accounts}">

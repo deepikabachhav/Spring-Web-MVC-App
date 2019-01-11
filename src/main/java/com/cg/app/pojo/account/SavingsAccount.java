@@ -5,7 +5,10 @@ import java.util.List;
 public class SavingsAccount {
 	private boolean salary;
 	private BankAccount bankAccount;
-
+	
+	public SavingsAccount() {
+	}
+	
 	public SavingsAccount(String accountHolderName, double accountBalance, boolean salary) {
 		bankAccount = new BankAccount(accountHolderName, accountBalance);
 		this.salary = salary;
@@ -19,7 +22,7 @@ public class SavingsAccount {
 		bankAccount = new BankAccount(accountNumber, accountHolderName, accountBalance);
 		this.salary = salary;
 	}
-	
+
 	public boolean isSalary() {
 		return salary;
 	}

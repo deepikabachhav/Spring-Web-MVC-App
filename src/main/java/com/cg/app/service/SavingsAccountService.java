@@ -1,6 +1,5 @@
 package com.cg.app.service;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import com.cg.app.pojo.account.SavingsAccount;
@@ -32,4 +31,5 @@ public interface SavingsAccountService {
 			throws AccountNotFoundException;
 
 	List<SavingsAccount> sort(int choice, int sortBy);
+
 }
