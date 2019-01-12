@@ -7,14 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<form action="search">
-		<h3>Search Account By</h3>
-		<li><a href="searchByAccountNumber">Search By Account Number</a></li>
-         <li><a href="searchByName">Search By Name</a></li>
-	</form><br /><br />
-	<div>
+	<form action="depositAmount">
+		Enter Account Number: <input type="number" name="txtAccountNumber" /><br /><br />
+		Enter Amount: <input type="text" name="amount" /> <br /> <br />
+		<input type="submit" value="submit">
+	</form><br />
+		<div>
 		<jsp:include page="HomeLink.html"></jsp:include>
-	</div>
+		</div>
 </body>
 </html>
