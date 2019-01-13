@@ -2,15 +2,15 @@ package com.cg.app.factory;
 
 import com.cg.app.pojo.account.SavingsAccount;
 
-public final class AccountFactory {
+public final class SavingsAccountFactory {
 	
-	private static AccountFactory factory = new AccountFactory();
+	private static SavingsAccountFactory factory = new SavingsAccountFactory();
 
-	private AccountFactory() {
+	private SavingsAccountFactory() {
 		
 	}
 	
-	public static AccountFactory getInstance() {
+	public static SavingsAccountFactory getInstance() {
 		return factory;
 	}
 

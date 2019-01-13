@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="fundtransfer">
+	<form action="fundtransferAmount">
 		Enter sender's Account Number: <input type="text" name="senderAccountNumber" maxlength="14" /> <br /> <br />
 		Enter receiver's Account Number: <input type="text" name="receiverAccountNumber" maxlength="14" /> <br /> <br />
 		Enter Amount: <input type="number" name="amount" /> <br /> <br />

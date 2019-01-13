@@ -7,7 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<ul>
+	
+		
+		<form action="Account" metod=" post">
+		<ul>
 				<h2>Welcome to MMBank !!</h2>
 				<li><a href="addNewAccount">Add New Account</a></li>
                 <li><a href="updateAccount">Update Account</a></li>
@@ -21,5 +24,6 @@
                <li><a href="sortAccounts">Sort Accounts</a></li>
         
 	</ul>
+	</form>
 </body>
 </html>

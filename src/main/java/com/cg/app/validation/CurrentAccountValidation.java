@@ -1,28 +1,22 @@
-
 package com.cg.app.validation;
 
 import java.util.logging.Logger;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
-import com.cg.app.pojo.account.SavingsAccount;
-import com.cg.app.pojo.exception.InsufficientFundsException;
 import com.cg.app.pojo.exception.InvalidInputException;
 
 @Component
 @Aspect
-public class Validation {
-	private Logger logger = Logger.getLogger(Validation.class.getName());
+public class CurrentAccountValidation {
+	private Logger logger = Logger.getLogger(CurrentAccountValidation.class.getName());
 
-	@Around("execution(* com.cg.app.service.SavingsAccountServiceImpl.withdraw(..))")
+	@Around("execution(* com.cg.app.service.CurrentAccountServiceImpl.withdraw(..))")
 	public void validateWithdraw(ProceedingJoinPoint pjp) throws Throwable {
 		Object[] parameters = pjp.getArgs();
-		// SavingsAccount savingsAccount = (SavingsAccount) parameters[0];
-		// double currentBalance = savingsAccount.getBankAccount().getAccountBalance();
 		if ((Double) parameters[1] > 0) {
 			pjp.proceed();
 			logger.info("Transaction successfull!");
@@ -32,7 +26,7 @@ public class Validation {
 		}
 	}
 
-	@Around("execution(* com.cg.app.service.SavingsAccountServiceImpl.deposit(..))")
+	@Around("execution(* com.cg.app.service.CurrentAccountServiceImpl.deposit(..))")
 	public void validateDeposite(ProceedingJoinPoint pjp) throws Throwable {
 		Object[] parameters = pjp.getArgs();
 		if ((Double) parameters[1] > 0) {
@@ -45,7 +39,7 @@ public class Validation {
 		}
 	}
 	
-	@Around("execution(* com.cg.app.service.SavingsAccountServiceImpl.fundTransfer(..))")
+	@Around("execution(* com.cg.app.service.CurrentAccountServiceImpl.fundTransfer(..))")
 	public void validateFundTransfer(ProceedingJoinPoint pjp) throws Throwable {
 		Object[] parameters = pjp.getArgs();
 		if ((Double) parameters[1] > 0) {

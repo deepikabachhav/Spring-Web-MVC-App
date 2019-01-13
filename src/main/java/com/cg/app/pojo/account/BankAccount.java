@@ -4,6 +4,7 @@ public class BankAccount {
 	private  int accountNumber;
 	private double accountBalance;
 	private String accountHolderName;
+	private String type;
 	//private static int accountId;
 
 	/*static {
@@ -25,6 +26,13 @@ public class BankAccount {
 		this.accountNumber = accountNumber;
 		this.accountHolderName = accountHolderName;
 		this.accountBalance = accountBalance;
+	}
+	
+	public BankAccount(int accountNumber, String accountHolderName, double accountBalance,String type) {
+		this.accountNumber = accountNumber;
+		this.accountHolderName = accountHolderName;
+		this.accountBalance = accountBalance;
+		this.type=type;
 	}
 
 	public String getAccountHolderName() {

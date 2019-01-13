@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.cg.app.dao.SavingsAccountDAO;
-import com.cg.app.factory.AccountFactory;
+import com.cg.app.factory.SavingsAccountFactory;
 import com.cg.app.pojo.account.SavingsAccount;
 import com.cg.app.pojo.exception.AccountNotFoundException;
 import com.cg.app.pojo.exception.InsufficientFundsException;
@@ -16,14 +16,13 @@ import com.cg.app.pojo.exception.InvalidInputException;
 @Service
 public class SavingsAccountServiceImpl implements SavingsAccountService {
 
-	private AccountFactory factory;
+	private SavingsAccountFactory factory;
 	@Autowired
 	private SavingsAccountDAO savingsAccountDAO;
 	
 	
 	public SavingsAccountServiceImpl( SavingsAccountDAO savingsAccountDAO) {
-		factory = AccountFactory.getInstance();
-		//savingsAccountDAO = new SavingsAccountDAOImpl();
+		factory = SavingsAccountFactory.getInstance();
 	}
 
 	

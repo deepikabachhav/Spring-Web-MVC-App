@@ -11,9 +11,9 @@ import com.cg.app.ui.AccountCUI;
 
 public class App {
 	
-	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		AccountCUI accountCUI = context.getBean(AccountCUI.class);
-		accountCUI.start();
-	}
+	/*
+	 * public static void main(String[] args) { ApplicationContext context = new
+	 * ClassPathXmlApplicationContext("applicationContext.xml"); AccountCUI
+	 * accountCUI = context.getBean(AccountCUI.class); accountCUI.start(); }
+	 */
 }
